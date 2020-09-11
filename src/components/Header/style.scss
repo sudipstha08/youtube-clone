@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+
+  &__logo {
+    height: 25px;
+    object-fit: contain;
+    margin-left: 1em;
+  }
+
+  &__left {
+
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    border: 1px solid black;
+
+    input {
+      flex: 1;
+      border: none;
+    }
+
+    &-button {
+      width: 50px !important;
+      background: #fafafa;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.slick-arrow {
+  color: blue;
+  margin-left: 50px;
+  background: black;
+  z-index: 9999;
+
+  &:hover {
+    background: black;
+  }
+}
