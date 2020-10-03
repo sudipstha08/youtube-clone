@@ -1,0 +1,30 @@
+.search-page {
+  display: flex;
+
+  &__contents {
+    flex: 0.8;
+    padding: .5em 1em;
+
+    & > hr {
+      height: 1px;
+      border: 0;
+      background: lightgray;
+      margin: .75em 0;
+      margin-right: 12em;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    color: rgb(96, 96, 96);
+    align-items: center;
+
+    h5 {
+      font-size: 14px;
+      margin-left: .5em;
+      font-weight: 500;
+    }
+  }
+
+  
+}
