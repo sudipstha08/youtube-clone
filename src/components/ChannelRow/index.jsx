@@ -26,7 +26,7 @@ ChannelRow.propTypes = {
   image: PropTypes.string,
   channel: PropTypes.string,
   verified: PropTypes.bool,
-  subs: PropTypes.number,
+  subs: PropTypes.string,
   noOfVideos: PropTypes.number,
   desp: PropTypes.string,
 }

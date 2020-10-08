@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -9,14 +9,15 @@ import AppsIcon from '@material-ui/icons/Apps'
 import MenuIcon from '@material-ui/icons/Menu'
 import Avatar from '@material-ui/core/Avatar'
 
+import { GlobalContext } from '../../context/GlobalState'
 import YoutubeLogo from '../../assets/icons/youtube.png'
 import ProfileImage from '../../assets/images/coder.jpg'
 import './style.scss'
 
 const Header = ({ history }) => {
-  const [searchQuery, setSearchQuery] = useState('')
+  const { searchQuery, handleChangeSearchQuery } = useContext(GlobalContext)
   const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value)
+    handleChangeSearchQuery(e.target.value)
   }
 
   const handleSearchKeyDown = (e) => {
