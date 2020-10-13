@@ -6,6 +6,7 @@ import AppReducer from './AppReducer'
 const initialState = {
   searchResults: {},
   searchQuery: '',
+  searchTrigger: false,
 }
 
 // Create context

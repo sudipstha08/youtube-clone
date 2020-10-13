@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import TuneOutlinedIcon from '@material-ui/icons/TuneOutlined'
 
@@ -9,14 +9,11 @@ import Sidebar from '../../components/Sidebar'
 import './style.scss'
 
 const SearchPage = () => {
-  const { searchVideos, searchResults, searchQuery } = useContext(GlobalContext)
+  const { searchVideos, searchResults } = useContext(GlobalContext)
+  
   useEffect(() => {
     searchVideos()
-  }, [])
-
-  useEffect(() => {
-    console.log(searchResults);
-  }, [searchResults])
+  }, [window.location.search])
 
   return (
     <div className="search-page">
