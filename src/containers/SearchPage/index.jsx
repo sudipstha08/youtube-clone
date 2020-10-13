@@ -14,6 +14,10 @@ const SearchPage = () => {
     searchVideos()
   }, [])
 
+  useEffect(() => {
+    console.log(searchResults);
+  }, [searchResults])
+
   return (
     <div className="search-page">
       <Sidebar />

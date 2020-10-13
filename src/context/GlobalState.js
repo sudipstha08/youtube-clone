@@ -18,7 +18,7 @@ export const GlobalProvider = ({ children }) => {
   // ACTIONS
   function searchVideos() {
     fetch(
-      `https://www.googleapis.com/youtube/v3/search?q=${state.searchQuery}&key=${process.env.API_KEY}&part=snippet`,
+      `https://www.googleapis.com/youtube/v3/search?q=${state.searchQuery}&key=${process.env.REACT_APP_API_KEY}&part=snippet&maxResults=20`,
     )
       .then((res) => res.json())
       .then((data) =>
