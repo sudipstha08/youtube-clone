@@ -3,9 +3,7 @@
 
   &__contents {
     flex: 5;
-    iframe {
-
-    }
+    iframe {}
   }
 
   &__desp {
@@ -92,6 +90,7 @@
     }
 
     .subscribe-button {
+      position: absolute;
       background: rgb(204, 0, 0);
       color: #fff;
       padding: .5em 1em;
@@ -102,7 +101,6 @@
       font-style: normal;
       font-stretch: 100%;
       letter-spacing: 0.007px;
-      position: absolute;
       right: 0;
 
       &:hover {
