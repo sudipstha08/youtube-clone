@@ -15,6 +15,7 @@ const SearchPage = () => {
     searchVideos()
   }, [window.location.search])
 
+  console.log('sear', searchResults)
   return (
     <div className="search-page">
       <Sidebar />
@@ -35,6 +36,7 @@ const SearchPage = () => {
         <hr />
         {searchResults?.items?.map((video) => 
           <VideoRow
+            vidId={video.id.videoId}
             title={video.snippet.title}
             views="2.3M"
             subs="500k"

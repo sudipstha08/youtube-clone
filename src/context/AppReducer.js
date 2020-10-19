@@ -4,6 +4,10 @@ export default (state, action) => {
       return { ...state, searchResults: action.payload }
     case 'HANDLE_CHANGE_SEARCH_QUERY':
       return { ...state, searchQuery: action.payload }
+    case 'FETCH_CURRENT_VIDEO':
+      return { ...state, currentVidData: action.payload }
+    case 'FETCH_CURRENT_CHANNEL':
+      return { ...state, currentChannelData: action.payload }
     default:
       return state
   }

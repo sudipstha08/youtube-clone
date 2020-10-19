@@ -1,0 +1,118 @@
+.video-player {
+  display: flex !important;
+
+  &__contents {
+    flex: 5;
+    iframe {
+
+    }
+  }
+
+  &__desp {
+    padding: 1em 0;
+  }
+
+  &__title {
+    h3 {
+      color: rgb(3, 3, 3);
+      font-weight: 500;
+      font-size: 1.125rem;
+      font-family: Roboto, Arial, sans-serif;
+    }
+    padding-bottom: .5em;
+  }
+
+  &__infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .views-count {
+      p {
+        color: rgb(96, 96, 96);
+        font-size: .875rem;
+        font-family: Roboto, Arial, sans-serif;
+      }
+    }
+  }
+
+  &__options {
+    display: flex;
+    align-items: center;
+
+    .option {
+      display: flex;
+      align-items: center;
+      padding: 0 .5em;
+      color: rgb(96, 96, 96);
+      cursor: pointer;
+
+      .icon {
+        width: 20px !important;
+        padding-right: .175em;
+      }
+    }
+  }
+
+  &__channel {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .channel-profile {
+      margin: 0 1em;
+      margin-left: 0;
+    }
+
+    .channel-title {
+      display: flex;
+      align-items: center;
+      color: rgb(3,3,3);
+      font-weight: 500;
+      font-size: 1rem;
+
+      .verified-icon {
+        color: rgb(96, 96, 96) !important;
+        height: 15px;
+      }
+    }
+
+    .channel-subs {
+      color: rgb(96, 96, 96);
+      font-size: .875rem;
+      font-weight: 400;
+      padding-top: 2px;
+    }
+
+    .video-desp {
+      color: rgb(3,3,3);
+      font-size: .875rem;
+      font-weight: 400;
+      padding: 1em 0;
+    }
+
+    .subscribe-button {
+      background: rgb(204, 0, 0);
+      color: #fff;
+      padding: .5em 1em;
+      font-weight: 600;
+      font-size: .875rem;
+      text-transform: uppercase;
+      font-family: Roboto, Noto, sans-serif;
+      font-style: normal;
+      font-stretch: 100%;
+      letter-spacing: 0.007px;
+      position: absolute;
+      right: 0;
+
+      &:hover {
+        background: rgb(204, 0, 0);
+        color: #fff;
+      }
+    }
+  }
+
+  &__related-vids {
+    flex: 2;
+  }
+}

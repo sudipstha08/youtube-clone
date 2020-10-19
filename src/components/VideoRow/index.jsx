@@ -1,11 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import './style.scss'
 
-const VideoRow = ({ views, subs, desp, timeStamp, channel, title, image }) => {
+const VideoRow = ({
+  vidId,
+  views,
+  subs,
+  desp,
+  timeStamp,
+  channel,
+  title,
+  image,
+}) => {
   return (
     <div className="video-row">
-      <img src={image} alt="channel-image" />
+      <Link to={`watch?v=${vidId}`}>
+        <img src={image} alt="channel-image" />
+      </Link>
       <div className="video-row__text">
         <h3>{title}</h3>
         <p className="video-row__headline">
@@ -22,6 +34,7 @@ const VideoRow = ({ views, subs, desp, timeStamp, channel, title, image }) => {
 }
 
 VideoRow.propTypes = {
+  vidId: PropTypes.string,
   views: PropTypes.string,
   subs: PropTypes.string,
   desp: PropTypes.string,

@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+
 import Avatar from '@material-ui/core/Avatar'
 import './style.scss'
 
 const VideoCard = ({
+  vidId,
   image,
   title,
   channel,
@@ -13,7 +16,10 @@ const VideoCard = ({
 }) => {
   return (
     <div className="video-card">
-      <img src={image} alt="thumbnail" className="video-card__thumbnail" />
+      <Link to={`watch?v=${vidId}`}>
+        <img src={image} alt="thumbnail" className="video-card__thumbnail" />
+      </Link>
+
       <div className="video-card__info">
         <Avatar
           className="video-card__avatar"
@@ -21,7 +27,12 @@ const VideoCard = ({
           src={channelImage}
         />
         <div className="video-card__text">
-          <h4>{title}</h4>
+          <Link
+            to={`watch?v=${vidId}`}
+            style={{ textDecoration: 'none', color: 'rgb(0, 0, 0)' }}
+          >
+            <h4>{title}</h4>
+          </Link>
           <p>{channel}</p>
           <p>
             {views} &bull; {timeStamp}
@@ -33,6 +44,7 @@ const VideoCard = ({
 }
 
 VideoCard.propTypes = {
+  vidId: PropTypes.string,
   image: PropTypes.string,
   title: PropTypes.string,
   channel: PropTypes.string,
