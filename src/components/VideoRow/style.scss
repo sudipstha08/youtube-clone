@@ -1,0 +1,35 @@
+.video-row {
+  display: flex;
+  margin-bottom: 30px;
+  max-width: 700px;
+
+  img {
+    object-fit: contain;
+    width: 246px;
+    height: 138px;
+  }
+
+  &__text {
+    margin: .5em 1em;
+  }
+
+  &__headline {
+    font-size: .75rem;   
+    color: #606060; 
+
+    span {
+      background: lightgray;
+      padding: 2px;
+      span {
+        font-weight: 600;
+        color: rgb(84, 157, 211);
+      }
+    }
+  }
+
+  &__desp {
+    margin-top: 1.75em;
+    font-size: .75rem;   
+    color: #606060; 
+  }
+}

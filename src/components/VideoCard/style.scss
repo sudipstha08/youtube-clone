@@ -1,0 +1,35 @@
+.video-card {
+  width: 250px;
+  margin-bottom: 2em;
+
+  &__thumbnail {
+    height: 140px;
+    width: 250px;
+  }
+
+  &__info {
+    display: flex;
+    padding-right: 1.5em;
+    margin-top: .75em;
+  }
+
+  &__avatar {
+    height: 30px;
+    width: 30px;
+  }
+
+  &__text {
+    margin-left: .75em;
+
+    h4 {
+      font-size: .875rem;
+      margin-bottom: .25em;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: .875rem;
+      color: rgb(96, 96, 96);
+    }
+  }
+}

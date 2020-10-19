@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+
+  &__logo {
+    height: 21px;
+    object-fit: contain;
+    margin-left: 1em;
+    cursor: pointer;
+  }
+
+  &__left {}
+
+  &__input {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    border: 1px solid rgb(204, 204, 204);
+
+    input {
+      flex: 1;
+      border: none;
+      font-size: 16px;
+      font-family: 'Ubuntu', sans-serif;
+      padding: 0 .5em;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-btn {
+      width: 50px !important;
+      background: #fafafa;
+      border-left: 1px solid lightgray;
+      color: gray;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    color: #606060;
+    cursor: pointer;
+  }
+}
