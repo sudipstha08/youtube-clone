@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
@@ -18,10 +18,32 @@ const VideoCard = ({
   channelId,
 }) => {
   const { fetchCurrentChannel } = useContext(GlobalContext)
+  const [vidTimeStamp, setVidTimeStamp] = useState('')
 
   useEffect(() => {
     fetchCurrentChannel(channelId)
   }, [])
+
+  const dateNow = new Date()
+  const date = new Date(timeStamp)
+  const sec = dateNow - date
+  const times = sec/(60*60*1000)
+
+  useEffect(() => {
+    if(times >= 8760) {
+      const day = Math.floor(times / 24)
+      setVidTimeStamp(`${day} day ago`)
+    } else if (times >= 720) {
+      const day = Math.floor(times / 24)
+      setVidTimeStamp(`${day} day ago`)
+    } else if (times >= 24) {
+      const day = Math.floor(times / 24)
+      setVidTimeStamp(`${day} day ago`)
+    } else {
+      setVidTimeStamp(`${Math.floor(times)} hours ago`)
+    }
+  }, [vidTimeStamp])
+ 
 
   return (
     <div className="video-card">
@@ -44,7 +66,7 @@ const VideoCard = ({
           </Link>
           <p>{channel}</p>
           <p>
-            {viewCount} views &bull; {timeStamp}
+            {viewCount} views &bull; {vidTimeStamp}
           </p>
         </div>
       </div>

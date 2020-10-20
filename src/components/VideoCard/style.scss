@@ -27,7 +27,8 @@
       font-weight: 500;
       line-height: 1.3;
       width: 200px;
-      height: 33px;
+      min-height: 20px;
+      max-height: 40px;
       white-space: wrap;
       overflow: hidden;
       text-overflow: ellipsis !important;

@@ -16,7 +16,7 @@ const HomePage = () => {
   }, [])
 
   useEffect(() => {
-    if (videos.length !== 0) {
+    if (videos.length != 0) {
       const ids = videos.map((video) => video.snippet.channelId)
 
       fetch(
