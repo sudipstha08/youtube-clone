@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import Avatar from '@material-ui/core/Avatar'
+import { GlobalContext } from '../../context/GlobalState'
+
 import './style.scss'
 
 const VideoCard = ({
@@ -10,10 +12,17 @@ const VideoCard = ({
   image,
   title,
   channel,
-  views,
   timeStamp,
   channelImage,
+  viewCount,
+  channelId,
 }) => {
+  const { fetchCurrentChannel } = useContext(GlobalContext)
+
+  useEffect(() => {
+    fetchCurrentChannel(channelId)
+  }, [])
+
   return (
     <div className="video-card">
       <Link to={`watch?v=${vidId}`}>
@@ -24,7 +33,7 @@ const VideoCard = ({
         <Avatar
           className="video-card__avatar"
           alt={channel}
-          src={channelImage}
+          src={channelImage?.[0].snippet.thumbnails.medium.url}
         />
         <div className="video-card__text">
           <Link
@@ -35,7 +44,7 @@ const VideoCard = ({
           </Link>
           <p>{channel}</p>
           <p>
-            {views} &bull; {timeStamp}
+            {viewCount} views &bull; {timeStamp}
           </p>
         </div>
       </div>
@@ -48,9 +57,10 @@ VideoCard.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
   channel: PropTypes.string,
-  views: PropTypes.string,
+  viewCount: PropTypes.string,
   timeStamp: PropTypes.string,
   channelImage: PropTypes.string,
+  channelId: PropTypes.string,
 }
 
 export default VideoCard

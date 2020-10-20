@@ -3,17 +3,18 @@ import VideoCard from '../VideoCard'
 
 import './style.scss'
 
-const RecommendedVideos = ({ videos }) => {
+const RecommendedVideos = ({ videos, channelDatas }) => {
   return (
     <div className="recommended-videos">
       <section className="recommended-videos__videos">
-        {videos?.map(video => (
+        {videos?.map((video, idx) => (
           <VideoCard
             vidId={video.id}
             title={video.snippet.title}
-            views="2.3M views"
-            timeStamp="3 days ago"
-            channelImage="https://lh3.googleusercontent.com/a-/AOh14GjuMf0BMPOIsvjsi1shlvjcrUv3-bJrN9TdLMu9Ew=s88-c-k-c0x00ffffff-no-rj-mo"
+            viewCount={video.statistics.viewCount}
+            timeStamp={video.snippet.publishedAt}
+            channelId={video.snippet.channelId}
+            channelImage={channelDatas.items?.filter(channel => channel.id === video.snippet.channelId)}
             image={video.snippet.thumbnails.medium.url}
             channel={video.snippet.channelTitle}
           />
