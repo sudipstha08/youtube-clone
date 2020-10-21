@@ -15,6 +15,7 @@ const RecommendedVideos = ({ videos, channelDatas }) => {
             timeStamp={video.snippet.publishedAt}
             channelId={video.snippet.channelId}
             channelImage={channelDatas.items?.filter(channel => channel.id === video.snippet.channelId)}
+            subsCount={channelDatas.items?.filter(channel => channel.id === video.snippet.channelId)?.[0].statistics.subscriberCount}
             image={video.snippet.thumbnails.medium.url}
             channel={video.snippet.channelTitle}
           />

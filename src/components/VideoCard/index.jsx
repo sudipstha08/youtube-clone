@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import Avatar from '@material-ui/core/Avatar'
+import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import { GlobalContext } from '../../context/GlobalState'
 
 import './style.scss'
@@ -16,9 +17,11 @@ const VideoCard = ({
   channelImage,
   viewCount,
   channelId,
+  subsCount
 }) => {
   const { fetchCurrentChannel } = useContext(GlobalContext)
   const [vidTimeStamp, setVidTimeStamp] = useState('')
+  const [views, setViews] = useState('')
 
   useEffect(() => {
     fetchCurrentChannel(channelId)
@@ -43,7 +46,24 @@ const VideoCard = ({
       setVidTimeStamp(`${Math.floor(times)} hours ago`)
     }
   }, [vidTimeStamp])
+
+  useEffect(() => {
+    const NumOfViews = parseInt(viewCount)
+    if(NumOfViews < 1000) {
+      setViews(NumOfViews)
+    } else if (NumOfViews < 1000000) {
+      const noOfK = Math.floor(NumOfViews / 1000)
+      setViews(`${noOfK}k`) 
+    } else if (NumOfViews <= 1000000000) {
+      const noOfM = Math.floor(NumOfViews / 1000000)
+      setViews(`${noOfM}M`)
+    } else {
+      const noOfB = Math.floor(NumOfViews / 1000000000)
+      setViews(`${noOfB}B`)
+    }
+  }, [])
  
+  const isVerified = parseInt(subsCount) >= 100000
 
   return (
     <div className="video-card">
@@ -62,11 +82,11 @@ const VideoCard = ({
             to={`watch?v=${vidId}`}
             style={{ textDecoration: 'none', color: 'rgb(0, 0, 0)' }}
           >
-            <h4>{title}</h4>
+            <h4>{title}</h4> 
           </Link>
-          <p>{channel}</p>
+          <p style={{ display: 'flex', alignItems: 'center' }}>{channel} &nbsp;{isVerified ?<CheckCircleIcon className="video-card__channel-verification-icon" /> : ''}</p>
           <p>
-            {viewCount} views &bull; {vidTimeStamp}
+            {views} views &bull; {vidTimeStamp}
           </p>
         </div>
       </div>
