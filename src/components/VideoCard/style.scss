@@ -47,4 +47,12 @@
     width: 16px !important;
     color: rgb(96, 96, 96);
   }
+
+  &__channel-name {
+    min-width: 30px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+  }
 }

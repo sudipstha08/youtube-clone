@@ -84,7 +84,7 @@ const VideoCard = ({
           >
             <h4>{title}</h4> 
           </Link>
-          <p style={{ display: 'flex', alignItems: 'center' }}>{channel} &nbsp;{isVerified ?<CheckCircleIcon className="video-card__channel-verification-icon" /> : ''}</p>
+          <p style={{ display: 'flex', alignItems: 'center' }}><span className="video-card__channel-name">{channel} </span>&nbsp;{isVerified ?<CheckCircleIcon className="video-card__channel-verification-icon" /> : ''}</p>
           <p>
             {views} views &bull; {vidTimeStamp}
           </p>

@@ -20,6 +20,7 @@ const VideoPlayerPage = (props) => {
   const currentVidId = query.get('v')
 
   useEffect(() => {
+    window.scrollTo(0,0)
     fetchCurrentVideo(currentVidId)
   }, [])
 
