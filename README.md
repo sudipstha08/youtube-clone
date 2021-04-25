@@ -8,19 +8,20 @@ Youtube clone application using React JS.
 | `firebase login`  | start app           |
 | `firebase deploy` | start app           |
 ## Technologies used
-| Technologies  | Desp   |
+| Technologies  |          Desp           |
 |---------------|-------------------------|
 | `Material UI` | react components for faster and easier web development |
 | `React JS`    | js library for building UI |
-| `Firebase`    | hosting |
+| `Firebase`    | hosting                    |
 | `GCP`         | cloud computing services (`IAAS & PAAS`) |
-| `Context API` | state management|
+| `Context API` | state management           |
 | `BEM Naming convention`| naming convention for css |
 
 ## How to get started ?
 1. Get `API` key from `GCP`
-2. Create `.env` file in the root directory
+2. Create `.env` file in the `root` directory
 3. Update `.env` taking `.env.example` as reference
+4. Start application
 
  ## Live Site
 <a href="https://clone-d09bd.web.app/" rel="youtube">![youtube-clone](https://github.com/sudipstha08/youtube-clone/blob/master/src/assets/images/youtube.png?raw=true)</a>
