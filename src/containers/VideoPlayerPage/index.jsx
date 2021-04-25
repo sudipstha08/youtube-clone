@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import PropTypes from 'prop-types'
-
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button'
 import { Box, Container } from '@material-ui/core'
 import { Avatar } from '@material-ui/core'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp'
@@ -10,13 +9,18 @@ import ReplyIcon from '@material-ui/icons/Reply'
 import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
-
 import { GlobalContext } from '../../context/GlobalState'
 import './style.scss'
 
 const VideoPlayerPage = (props) => {
-  const { currentVidData, fetchCurrentVideo, currentChannelData, fetchCurrentChannel } = useContext(GlobalContext)
-  const query = new URLSearchParams(props.location.search)
+  const {
+    currentVidData,
+    fetchCurrentVideo,
+    currentChannelData,
+    fetchCurrentChannel,
+  } = useContext(GlobalContext)
+  // eslint-disable-next-line react/prop-types
+  const query = new URLSearchParams(props?.location?.search)
   const currentVidId = query.get('v')
 
   useEffect(() => {
@@ -24,7 +28,7 @@ const VideoPlayerPage = (props) => {
   }, [])
 
   useEffect(() => {
-    if(currentVidData?.snippet?.channelId) {
+    if (currentVidData?.snippet?.channelId) {
       fetchCurrentChannel(currentVidData?.snippet?.channelId)
     }
   }, [currentVidData])
@@ -47,41 +51,48 @@ const VideoPlayerPage = (props) => {
           </Box>
           <Box className="video-player__infos">
             <Box className="views-count">
-              <p>{currentVidData?.statistics?.viewCount} Views &bull; {currentVidData?.snippet?.publishedAt}</p>
+              <p>
+                {currentVidData?.statistics?.viewCount} Views &bull;{' '}
+                {currentVidData?.snippet?.publishedAt}
+              </p>
             </Box>
             <Box className="video-player__options">
               <Box className="option">
-                <ThumbUpIcon className="icon"/> {currentVidData?.statistics?.likeCount}
+                <ThumbUpIcon className="icon" />{' '}
+                {currentVidData?.statistics?.likeCount}
               </Box>
               <Box className="option">
-                <ThumbDownIcon className="icon"/> {currentVidData?.statistics?.dislikeCount}
+                <ThumbDownIcon className="icon" />{' '}
+                {currentVidData?.statistics?.dislikeCount}
               </Box>
               <Box className="option">
-                <ReplyIcon className="icon"/> Share
+                <ReplyIcon className="icon" /> Share
               </Box>
               <Box className="option">
-                <PlaylistAddIcon className="icon"/> Save
+                <PlaylistAddIcon className="icon" /> Save
               </Box>
               <Box className="option">
-                <MoreHorizIcon className="icon"/>
+                <MoreHorizIcon className="icon" />
               </Box>
             </Box>
           </Box>
         </Box>
         <Box className="video-player__channel">
           <Avatar
-            src={currentChannelData.items ?.[0].snippet.thumbnails.medium.url}
+            src={currentChannelData.items?.[0].snippet.thumbnails.medium.url}
             className="channel-profile"
             alt="channel-image"
           />
-          <Box >
+          <Box>
             <Box className="channel-title">
-            {currentVidData?.snippet?.channelTitle}<CheckCircleIcon className="verified-icon" />
+              {currentVidData?.snippet?.channelTitle}
+              <CheckCircleIcon className="verified-icon" />
             </Box>
-            <p className="channel-subs">{currentChannelData.items ?.[0].statistics.subscriberCount} subscribers</p>
-            <p className="video-desp">
-            {currentVidData?.snippet?.description}
+            <p className="channel-subs">
+              {currentChannelData.items?.[0].statistics.subscriberCount}{' '}
+              subscribers
             </p>
+            <p className="video-desp">{currentVidData?.snippet?.description}</p>
           </Box>
           <Box>
             <Button variant="contained" className="subscribe-button">
@@ -97,7 +108,19 @@ const VideoPlayerPage = (props) => {
 }
 
 VideoPlayerPage.propTypes = {
-  props: PropTypes.object,
+  props: PropTypes.shape({
+    location: PropTypes.shape({
+      search: PropTypes.string.isRequired,
+    }),
+  }),
+}
+
+VideoPlayerPage.defaultProps = {
+  props: {
+    location: {
+      search: '',
+    },
+  },
 }
 
 export default VideoPlayerPage
