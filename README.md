@@ -14,3 +14,6 @@ Youtube clone application using React JS.
 
 ## APP_LINK
  https://clone-d09bd.web.app/
+
+ ## Live Site
+<a href="https://clone-d09bd.web.app/" rel="youtube">![youtube-clone](https://github.com/sudipstha08/youtube-clone/blob/master/src/assets/img/images/youtube.png?raw=true)</a>
