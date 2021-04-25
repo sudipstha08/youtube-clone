@@ -1,7 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-
+import React, { useContext, useEffect } from 'react'
 import TuneOutlinedIcon from '@material-ui/icons/TuneOutlined'
-
 import { GlobalContext } from '../../context/GlobalState'
 import ChannelRow from '../../components/ChannelRow'
 import VideoRow from '../../components/VideoRow'
@@ -10,12 +8,11 @@ import './style.scss'
 
 const SearchPage = () => {
   const { searchVideos, searchResults } = useContext(GlobalContext)
-  
+
   useEffect(() => {
     searchVideos()
   }, [window.location.search])
 
-  console.log('sear', searchResults)
   return (
     <div className="search-page">
       <Sidebar />
@@ -34,8 +31,9 @@ const SearchPage = () => {
           desp="Level up your coding skills here by watching hundred of indetailed videos on HTML, CSS and JS"
         />
         <hr />
-        {searchResults?.items?.map((video) => 
+        {searchResults?.items?.map((video) => (
           <VideoRow
+            key={`video${video.id.videoId}`}
             vidId={video.id.videoId}
             title={video.snippet.title}
             views="2.3M"
@@ -46,7 +44,7 @@ const SearchPage = () => {
             channel={video.snippet.channelTitle}
             desp={video.snippet.description}
           />
-        )}
+        ))}
       </div>
     </div>
   )

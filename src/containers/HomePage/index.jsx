@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-
 import RecommededVideos from '../../components/RecommendedVideos'
 import Sidebar from '../../components/Sidebar'
 import './style.scss'

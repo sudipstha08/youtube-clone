@@ -1,7 +1,12 @@
 # youtube-clone
 Youtube clone application using React JS.
 
-
+|Commands|Desp|
+|---------|----------|
+| `npm start` | start app |
+| `firebase init` | Initialize firebase |
+| `firebase login` | start app |
+| `firebase deploy` | start app |
 ## Technologies used
 1. `Material UI`
 2. `React JS`
