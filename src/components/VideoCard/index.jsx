@@ -1,10 +1,8 @@
 import React, { useEffect, useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-
 import Avatar from '@material-ui/core/Avatar'
 import { GlobalContext } from '../../context/GlobalState'
-
 import './style.scss'
 
 const VideoCard = ({

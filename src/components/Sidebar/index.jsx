@@ -1,5 +1,4 @@
 import React from 'react'
-
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined'
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions'
 import OndemandVideoIcon from '@material-ui/icons/OndemandVideo'
@@ -9,7 +8,6 @@ import WatchLaterIcon from '@material-ui/icons/WatchLater'
 import WhatshotIcon from '@material-ui/icons/Whatshot'
 import HistoryIcon from '@material-ui/icons/History'
 import HomeIcon from '@material-ui/icons/Home'
-
 import SidebarItem from '../SidebarItem'
 import './style.scss'
 

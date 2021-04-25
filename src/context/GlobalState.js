@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from 'react'
 import PropTypes from 'prop-types'
-
 import AppReducer from './AppReducer'
 
 const initialState = {
