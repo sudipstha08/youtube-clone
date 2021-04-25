@@ -7,6 +7,7 @@ import './style.scss'
 const HomePage = () => {
   const [videos, setVideos] = useState([])
   const [channelDatas, setChannelDatas] = useState([])
+
   useEffect(() => {
     fetch(
       `https://www.googleapis.com/youtube/v3/videos?key=${process.env.REACT_APP_API_KEY}&part=snippet,statistics&regionCode=US&chart=mostPopular&maxResults=32`,
@@ -16,13 +17,13 @@ const HomePage = () => {
   }, [])
 
   useEffect(() => {
-    if (videos.length !== 0) {
-      const ids = videos.map((video) => video.snippet.channelId)
+    if (videos?.length !== 0) {
+      const ids = videos?.map((video) => video.snippet.channelId)
 
       fetch(
         `https://www.googleapis.com/youtube/v3/channels?key=${
           process.env.REACT_APP_API_KEY
-        }&part=snippet,statistics&id=${ids.join()}`,
+        }&part=snippet,statistics&id=${ids?.join()}`,
       )
         .then((res) => res.json())
         .then((data) => setChannelDatas(data))
