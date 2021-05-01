@@ -26,6 +26,8 @@ Youtube clone application using React JS.
  ## Live Site
 <a href="https://clone-d09bd.web.app/" rel="youtube">![youtube-clone](https://github.com/sudipstha08/youtube-clone/blob/master/src/assets/images/youtube.png?raw=true)</a>
 
+#### :arrow_right: Open to Pull Request. Happy coding :v:
+
 ## Linting for CRA
 1. https://readwriteexercise.com/posts/setting-up-create-react-app-vs-code-eslint-prettier/
 2. https://create-react-app.dev/docs/setting-up-your-editor/
