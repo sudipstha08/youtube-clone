@@ -1,14 +1,12 @@
 import React, { useContext } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
-
 import NotificationsIcon from '@material-ui/icons/Notifications'
 import VideoCallIcon from '@material-ui/icons/VideoCall'
 import SearchIcon from '@material-ui/icons/Search'
 import AppsIcon from '@material-ui/icons/Apps'
 import MenuIcon from '@material-ui/icons/Menu'
 import Avatar from '@material-ui/core/Avatar'
-
 import { GlobalContext } from '../../context/GlobalState'
 import YoutubeLogo from '../../assets/icons/youtube.png'
 import ProfileImage from '../../assets/images/coder.jpg'
