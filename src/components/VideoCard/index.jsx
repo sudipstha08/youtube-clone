@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Avatar from '@material-ui/core/Avatar'
+import moment from 'moment'
 import { GlobalContext } from '../../context/GlobalState'
 import './style.scss'
 
@@ -42,7 +43,7 @@ const VideoCard = ({
           </Link>
           <p>{channel}</p>
           <p>
-            {viewCount} views &bull; {timeStamp}
+            {viewCount} views &bull; {moment(timeStamp).fromNow()}
           </p>
         </div>
       </div>

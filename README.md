@@ -21,7 +21,7 @@ Youtube clone application using React JS.
 1. Get `API` key from `GCP`
 2. Create `.env` file in the `root` directory
 3. Update `.env` taking `.env.example` as reference
-4. Start application
+4. Start application `npm start`
 
  ## Live Site
 <a href="https://clone-d09bd.web.app/" rel="youtube">![youtube-clone](https://github.com/sudipstha08/youtube-clone/blob/master/src/assets/images/youtube.png?raw=true)</a>
