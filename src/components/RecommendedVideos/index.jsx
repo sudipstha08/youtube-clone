@@ -8,21 +8,27 @@ const RecommendedVideos = ({ videos, channelDatas }) => {
   return (
     <div className="recommended-videos">
       <section className="recommended-videos__videos">
-        {videos?.map((video) => (
-          <VideoCard
-            key={`video${video.id}`}
-            vidId={video.id}
-            title={video.snippet.title}
-            viewCount={video.statistics.viewCount}
-            timeStamp={video.snippet.publishedAt}
-            channelId={video.snippet.channelId}
-            channelImage={channelDatas?.items?.filter(
-              (channel) => channel.id === video.snippet.channelId,
-            )}
-            image={video.snippet.thumbnails.medium.url}
-            channel={video.snippet.channelTitle}
-          />
-        ))}
+        {videos?.length > 0 &&
+          videos.map((video) => (
+            <VideoCard
+              key={`video${video.id}`}
+              vidId={video?.id}
+              title={video?.snippet.title}
+              viewCount={video?.statistics.viewCount}
+              timeStamp={video?.snippet.publishedAt}
+              channelId={video?.snippet.channelId}
+              channelImage={channelDatas.items?.filter(
+                (channel) => channel.id === video?.snippet.channelId,
+              )}
+              subsCount={
+                channelDatas.items?.filter(
+                  (channel) => channel.id === video?.snippet.channelId,
+                )?.[0]?.statistics.subscriberCount
+              }
+              image={video?.snippet?.thumbnails.medium.url}
+              channel={video?.snippet?.channelTitle}
+            />
+          ))}
       </section>
     </div>
   )
