@@ -11,6 +11,8 @@ const formatCount = (viewCount) => {
   } else if (numOfViews < Math.pow(10, 12)) {
     const noOfB = Math.floor(numOfViews / Math.pow(10, 9))
     return `${noOfB}B`
+  } else {
+    return 0
   }
 }
 
