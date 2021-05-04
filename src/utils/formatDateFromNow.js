@@ -8,7 +8,7 @@ const formatDateFromNow = (timeStamp) => {
     return `${year} year ago`
   } else if (times >= 720) {
     const month = Math.floor(times / (24 * 30))
-    return `${month} month ago`
+    return `${month} months ago`
   } else if (times >= 24) {
     const day = Math.floor(times / 24)
     return `${day} day ago`

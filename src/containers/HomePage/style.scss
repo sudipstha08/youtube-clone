@@ -2,4 +2,10 @@
   &__contents {
     display: flex;
   }
+  .loader {
+    flex: 0.8;
+    width: 100%;
+    text-align: center;
+    margin-top: calc(50vh - 100px);
+  }
 }

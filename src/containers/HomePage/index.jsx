@@ -8,12 +8,10 @@ import './style.scss'
 const HomePage = () => {
   const [videos, setVideos] = useState([])
   const [channelDatas, setChannelDatas] = useState([])
-  const [pageSize, setPageSize] = useState(36)
-  const [loading, setLoading] = useState(false)
+  const [pageSize] = useState(70)
 
   const fetchVideos = async () => {
     try {
-      setLoading(true)
       const res = await fetch(
         `https://www.googleapis.com/youtube/v3/videos?key=${process.env.REACT_APP_API_KEY}&part=snippet,statistics&regionCode=US&chart=mostPopular&maxResults=${pageSize}`,
       )
@@ -32,7 +30,7 @@ const HomePage = () => {
 
   useEffect(() => {
     fetchVideos()
-  }, [pageSize])
+  }, [])
 
   useEffect(() => {
     if (videos?.length !== 0) {
@@ -47,24 +45,11 @@ const HomePage = () => {
     }
   }, [videos])
 
-  useEffect(() => {
-    const recommendedVideos = document.querySelector('.recommended-videos')
-    window.addEventListener('scroll', () => {
-      if (recommendedVideos.scrollHeight - window.scrollY < 400) {
-        setPageSize((page) => page + 8)
-      }
-    })
-  }, [])
-
   return (
     <div className="homepage">
       <div className="homepage__contents">
         <Sidebar />
-        <RecommededVideos
-          videos={videos || ''}
-          channelDatas={channelDatas || ''}
-          loading={loading}
-        />
+        <RecommededVideos videos={videos} channelDatas={channelDatas} />
       </div>
     </div>
   )
