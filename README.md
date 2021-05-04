@@ -6,8 +6,8 @@ Youtube clone application using React JS.
 |-------------------|---------------------|
 | `npm start`       | start app           |
 | `firebase init`   | Initialize firebase |
-| `firebase login`  | start app           |
-| `firebase deploy` | start app           |
+| `firebase login`  | login to firebase           |
+| `firebase deploy` | deploy app to firebase           |
 ## Technologies used
 | Tech          |          Desp           |
 |---------------|-------------------------|
