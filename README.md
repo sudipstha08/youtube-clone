@@ -1,14 +1,15 @@
 # youtube-clone
 Youtube clone application using React JS.
 
+## Commands
 |       Commands    |     Desp            |
 |-------------------|---------------------|
 | `npm start`       | start app           |
 | `firebase init`   | Initialize firebase |
-| `firebase login`  | start app           |
-| `firebase deploy` | start app           |
+| `firebase login`  | login to firebase           |
+| `firebase deploy` | deploy app to firebase           |
 ## Technologies used
-| Technologies  |          Desp           |
+| Tech          |          Desp           |
 |---------------|-------------------------|
 | `Material UI` | react components for faster and easier web development |
 | `React JS`    | js library for building UI |
@@ -18,16 +19,14 @@ Youtube clone application using React JS.
 | `BEM Naming convention`| naming convention for css |
 
 ## How to get started ?
-1. Get `API` key from `GCP`
+1. Get `API_KEY` from `GCP`
 2. Create `.env` file in the `root` directory
 3. Update `.env` taking `.env.example` as reference
-4. Start application
+4. Start application `npm start`
 
  ## Live Site
 <a href="https://clone-d09bd.web.app/" rel="youtube">![youtube-clone](https://github.com/sudipstha08/youtube-clone/blob/master/src/assets/images/youtube.png?raw=true)</a>
 
 #### :arrow_right: Open to Pull Request. Happy coding :v:
 
-## Linting for CRA
-1. https://readwriteexercise.com/posts/setting-up-create-react-app-vs-code-eslint-prettier/
-2. https://create-react-app.dev/docs/setting-up-your-editor/
+

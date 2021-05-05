@@ -27,7 +27,8 @@
       font-weight: 500;
       line-height: 1.3;
       width: 200px;
-      height: 33px;
+      min-height: 20px;
+      max-height: 40px;
       white-space: wrap;
       overflow: hidden;
       text-overflow: ellipsis !important;
@@ -40,5 +41,18 @@
       font-size: .875rem;
       color: rgb(96, 96, 96);
     }
+  }
+
+  &__channel-verification-icon {
+    width: 16px !important;
+    color: rgb(96, 96, 96);
+  }
+
+  &__channel-name {
+    min-width: 30px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
   }
 }

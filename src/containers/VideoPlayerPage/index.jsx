@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 import Button from '@material-ui/core/Button'
 import { Box, Container } from '@material-ui/core'
 import { Avatar } from '@material-ui/core'
@@ -9,6 +10,7 @@ import ReplyIcon from '@material-ui/icons/Reply'
 import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
+import { formatCount, numWithCommas } from '../../utils'
 import { GlobalContext } from '../../context/GlobalState'
 import './style.scss'
 
@@ -24,6 +26,7 @@ const VideoPlayerPage = (props) => {
   const currentVidId = query.get('v')
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     fetchCurrentVideo(currentVidId)
   }, [])
 
@@ -52,18 +55,21 @@ const VideoPlayerPage = (props) => {
           <Box className="video-player__infos">
             <Box className="views-count">
               <p>
-                {currentVidData?.statistics?.viewCount} Views &bull;{' '}
-                {currentVidData?.snippet?.publishedAt}
+                {numWithCommas(currentVidData?.statistics?.viewCount) || '0'}{' '}
+                Views &bull;{' '}
+                {moment(currentVidData?.snippet?.publishedAt).format(
+                  'DD MMM YYYY',
+                )}
               </p>
             </Box>
             <Box className="video-player__options">
               <Box className="option">
                 <ThumbUpIcon className="icon" />{' '}
-                {currentVidData?.statistics?.likeCount}
+                {formatCount(currentVidData?.statistics?.likeCount)}
               </Box>
               <Box className="option">
                 <ThumbDownIcon className="icon" />{' '}
-                {currentVidData?.statistics?.dislikeCount}
+                {formatCount(currentVidData?.statistics?.dislikeCount)}
               </Box>
               <Box className="option">
                 <ReplyIcon className="icon" /> Share
@@ -89,7 +95,9 @@ const VideoPlayerPage = (props) => {
               <CheckCircleIcon className="verified-icon" />
             </Box>
             <p className="channel-subs">
-              {currentChannelData.items?.[0].statistics.subscriberCount}{' '}
+              {formatCount(
+                currentChannelData?.items?.[0].statistics.subscriberCount,
+              ) || '0'}{' '}
               subscribers
             </p>
             <p className="video-desp">{currentVidData?.snippet?.description}</p>
