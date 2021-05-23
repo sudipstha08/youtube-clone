@@ -23,12 +23,12 @@ const SearchPage = () => {
         </div>
         <hr />
         <ChannelRow
-          image="https://lh3.googleusercontent.com/a-/AOh14GjuMf0BMPOIsvjsi1shlvjcrUv3-bJrN9TdLMu9Ew=s88-c-k-c0x00ffffff-no-rj-mo"
+          image="https://t3.ftcdn.net/jpg/03/91/19/22/360_F_391192211_2w5pQpFV1aozYQhcIw3FqA35vuTxJKrB.jpg"
           channel="John Wick"
           verified
           subs="100k"
           noOfVideos={200}
-          desp="Level up your coding skills here by watching hundred of indetailed videos on HTML, CSS and JS"
+          desp="Level up your skills by watching hundred of videos here"
         />
         <hr />
         {searchResults?.items?.map((video) => (
