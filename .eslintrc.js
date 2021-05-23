@@ -31,6 +31,7 @@ module.exports = {
     'import/no-webpack-loader-syntax': 0,
     'import/prefer-default-export': 0,
     'max-len': 0,
+    'react-hooks/exhaustive-deps': 0,
     'newline-per-chained-call': 0,
     'no-confusing-arrow': 0,
     'no-console': 1,
@@ -48,6 +49,5 @@ module.exports = {
     'react/require-extension': 0,
     'react/self-closing-comp': 0,
     'react/sort-comp': 0,
-    'react-hooks/exhaustive-deps': 0
   }
 }

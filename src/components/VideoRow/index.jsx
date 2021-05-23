@@ -16,7 +16,7 @@ const VideoRow = ({
   return (
     <div className="video-row">
       <Link to={`watch?v=${vidId}`}>
-        <img src={image} alt="channel-image" />
+        <img src={image} alt="channel" />
       </Link>
       <div className="video-row__text">
         <h3>{title}</h3>

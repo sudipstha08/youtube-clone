@@ -2,7 +2,7 @@
 Youtube clone application using React JS.
 
 ## Commands
-|    Commands       |     Desp               |
+|    commands       |     description        |
 |-------------------|------------------------|
 | `npm start`       | start app              |
 | `npm run build`   | build app              |
@@ -10,8 +10,8 @@ Youtube clone application using React JS.
 | `firebase login`  | login to firebase      |
 | `firebase deploy` | deploy app to firebase |
 
-## Technologies used
-| Tech          |          Desp                                          |
+## Tech Stacks
+| techs         |    description                                         |
 |---------------|--------------------------------------------------------|
 | `Material UI` | react components for faster and easier web development |
 | `React JS`    | js library for building UI                             |

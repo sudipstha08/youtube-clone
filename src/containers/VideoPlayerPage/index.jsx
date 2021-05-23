@@ -53,6 +53,7 @@ const VideoPlayerPage = (props) => {
     <Container className="video-player">
       <Box className="video-player__contents">
         <iframe
+          title="video-player"
           width="853"
           height="480"
           autoPlay
