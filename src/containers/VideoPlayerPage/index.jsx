@@ -1,6 +1,7 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect, useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
+import Truncate from 'react-truncate'
 import Button from '@material-ui/core/Button'
 import { Box, Container } from '@material-ui/core'
 import { Avatar } from '@material-ui/core'
@@ -24,6 +25,18 @@ const VideoPlayerPage = (props) => {
   // eslint-disable-next-line react/prop-types
   const query = new URLSearchParams(props?.location?.search)
   const currentVidId = query.get('v')
+  const [truncated, setTruncated] = useState(false)
+  const [expanded, setExpanded] = useState(false)
+
+  const handleTruncate = (trunc) => {
+    if (truncated !== trunc) {
+      setTruncated(trunc)
+    }
+  }
+
+  const toggleLines = () => {
+    setExpanded((prevState) => !prevState)
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -89,7 +102,15 @@ const VideoPlayerPage = (props) => {
             className="channel-profile"
             alt="channel-image"
           />
-          <Box>
+          <Box
+            style={{
+              width: '80%',
+              textAlign: 'left',
+              float: 'left',
+              alignItems: 'flex-start',
+              justifyContent: 'flex-start',
+            }}
+          >
             <Box className="channel-title">
               {currentVidData?.snippet?.channelTitle}
               <CheckCircleIcon className="verified-icon" />
@@ -100,7 +121,28 @@ const VideoPlayerPage = (props) => {
               ) || '0'}{' '}
               subscribers
             </p>
-            <p className="video-desp">{currentVidData?.snippet?.description}</p>
+            <Truncate
+              lines={!expanded && 3}
+              ellipsis={
+                <span className="btn--read">
+                  ...{' '}
+                  <a href="#" onClick={toggleLines}>
+                    <div>SHOW MORE</div>
+                  </a>
+                </span>
+              }
+              onTruncate={handleTruncate}
+              className="video-desp"
+            >
+              {currentVidData?.snippet?.description}
+            </Truncate>
+            {!truncated && expanded && (
+              <span className="btn--read">
+                <a href="#" onClick={toggleLines}>
+                  <div>SHOW LESS</div>
+                </a>
+              </span>
+            )}
           </Box>
           <Box>
             <Button variant="contained" className="subscribe-button">
