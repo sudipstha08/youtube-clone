@@ -121,6 +121,13 @@
     }
   }
 
+  &__comments {
+    margin-top: 10px;
+    min-height: 20vh;
+    border-top: 1px solid rgb(68, 66, 66);
+    padding: 10px;
+  }
+
   &__related-vids {
     flex: 2;
   }
