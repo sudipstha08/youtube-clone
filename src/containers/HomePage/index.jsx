@@ -17,7 +17,7 @@ const HomePage = () => {
       )
       const json = await res.json()
       if (json) {
-        setVideos(json.items)
+        setVideos(json?.items)
       }
     } catch (err) {
       return (
@@ -40,7 +40,7 @@ const HomePage = () => {
           process.env.REACT_APP_API_KEY
         }&part=snippet,statistics&id=${ids?.join()}`,
       )
-        .then((res) => res.json())
+        .then((res) => res?.json())
         .then((data) => setChannelDatas(data))
     }
   }, [videos])

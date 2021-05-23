@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import VideoCard from '../VideoCard'
 import PropTypes from 'prop-types'
@@ -8,7 +7,7 @@ const RecommendedVideos = ({ videos, channelDatas }) => {
   return (
     <div className="recommended-videos">
       <section className="recommended-videos__videos">
-        {videos.map((video) => (
+        {videos?.map((video) => (
           <VideoCard
             key={`video${video.id}`}
             vidId={video.id}
@@ -36,6 +35,6 @@ const RecommendedVideos = ({ videos, channelDatas }) => {
 export default RecommendedVideos
 
 RecommendedVideos.propTypes = {
-  vidoes: PropTypes.any,
+  videos: PropTypes.array,
   channelDatas: PropTypes.object,
 }

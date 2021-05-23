@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import Avatar from '@material-ui/core/Avatar'
 import moment from 'moment'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
-import Skeleton from 'react-loading-skeleton'
 import { formatCount } from '../../utils'
 import { GlobalContext } from '../../context/GlobalState'
 import './style.scss'
@@ -30,30 +29,24 @@ const VideoCard = ({
   return (
     <div className="video-card">
       <Link to={`watch?v=${vidId}`}>
-        <img
-          src={image || <Skeleton />}
-          alt="thumbnail"
-          className="video-card__thumbnail"
-        />
+        <img src={image} alt="thumbnail" className="video-card__thumbnail" />
       </Link>
 
       <div className="video-card__info">
         <Avatar
           className="video-card__avatar"
           alt={channel}
-          src={channelImage?.[0]?.snippet.thumbnails.medium.url || <Skeleton />}
+          src={channelImage?.[0]?.snippet.thumbnails.medium.url}
         />
         <div className="video-card__text">
           <Link
             to={`watch?v=${vidId}`}
             style={{ textDecoration: 'none', color: 'rgb(0, 0, 0)' }}
           >
-            <h4>{title || <Skeleton />}</h4>
+            <h4>{title}</h4>
           </Link>
           <p style={{ display: 'flex', alignItems: 'center' }}>
-            <span className="video-card__channel-name">
-              {channel || <Skeleton />}{' '}
-            </span>
+            <span className="video-card__channel-name">{channel} </span>
             &nbsp;
             {isVerified ? (
               <CheckCircleIcon className="video-card__channel-verification-icon" />
@@ -62,8 +55,8 @@ const VideoCard = ({
             )}
           </p>
           <p>
-            {`${formatCount(viewCount)} views` || <Skeleton />}&nbsp;&bull;
-            {moment(timeStamp).fromNow() || <Skeleton />}
+            {`${formatCount(viewCount)} views`}&nbsp;&bull;
+            {moment(timeStamp).fromNow()}
           </p>
         </div>
       </div>
