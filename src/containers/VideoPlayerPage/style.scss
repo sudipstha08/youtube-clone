@@ -54,7 +54,6 @@
 
   &__channel {
     display: flex;
-    justify-content: space-between;
     position: relative;
 
     .channel-profile {
@@ -87,6 +86,18 @@
       font-size: .875rem;
       font-weight: 400;
       padding: 1em 0;
+    }
+
+    .btn--read {
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        div {
+          font-weight: 500;
+          color: #4C87F6;
+          font-size: 13px;
+        }
+      }
     }
 
     .subscribe-button {
