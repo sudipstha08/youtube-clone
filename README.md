@@ -13,11 +13,11 @@ Youtube clone application using React JS.
 ## Tech Stacks
 | techs         |    description                                         |
 |---------------|--------------------------------------------------------|
-| `Material UI` | react components for faster and easier web development |
-| `React JS`    | js library for building UI                             |
+| `material UI` | react components for faster and easier web development |
+| `react`       | js library for building UI                             |
 | `Firebase`    | hosting                                                |
-| `GCP`         | cloud computing services (`IAAS & PAAS`)               |
-| `Context API` | state management                                       |
+| `gcp`         | cloud computing services (`IAAS & PAAS`)               |
+| `context api` | state management                                       |
 | `BEM css`     | naming convention for css                     |
 
 ## How to get started ?
@@ -26,7 +26,7 @@ Youtube clone application using React JS.
 3. Update `.env` taking `.env.example` as reference
 4. Start application `npm start`
 
- ## Live Site
+ ## <a href="https://clone-d09bd.web.app/">Live Site</a>
 <a href="https://clone-d09bd.web.app/" rel="youtube">![youtube-clone](https://github.com/sudipstha08/youtube-clone/blob/master/src/assets/images/youtube.png?raw=true)</a>
 
 #### :arrow_right: Open to Pull Request. Happy coding :v:
