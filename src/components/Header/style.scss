@@ -53,4 +53,9 @@
     color: #606060;
     cursor: pointer;
   }
+
+  &__avatar {
+    cursor: pointer;
+    min-height: 200px;
+  }
 }
