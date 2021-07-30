@@ -13,10 +13,12 @@ jobs:
         with:
           node-version: 12.x
       - run: npm ci
-      - run: npm run build
+      - name: build
+        run: npm run build
+        env:
+          CI: false
       - uses: w9jds/firebase-action@master
         with: 
           args: deploy --only hosting
         env: 
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          CI: false
