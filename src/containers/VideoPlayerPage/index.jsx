@@ -153,7 +153,8 @@ const VideoPlayerPage = (props) => {
         </Box>
         <Box className="video-player__comments">
           Comments {currentVidData?.statistics?.commentCount}
-          <p>This is the comments</p>
+          <p>Hello World</p>
+          <p>Enjoy coding ✨ </p>
         </Box>
       </Box>
       <Box className="video-player__related-vids">Related Videos</Box>
