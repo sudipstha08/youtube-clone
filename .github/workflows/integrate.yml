@@ -1,4 +1,4 @@
-name: youtube-clone CI
+name: youtube-clone_ci
 
 on: 
   pull_request:
