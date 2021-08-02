@@ -6,13 +6,14 @@ Youtube clone application using React JS.
 ![License](https://img.shields.io/github/license/dyarleniber/react-workflow-gh-actions)
 
 ## Commands
-|    commands       |     description        |
-|-------------------|------------------------|
-| `npm start`       | start app              |
-| `npm run build`   | build app              |
-| `firebase init`   | Initialize firebase    |
-| `firebase login`  | login to firebase      |
-| `firebase deploy` | deploy app to firebase |
+|    commands         |     description        |
+|---------------------|------------------------|
+| `npm start`         | start app              |
+| `npm run build`     | build app              |
+| `firebase init`     | Initialize firebase    |
+| `firebase login`    | login to firebase      |
+| `firebase deploy`   | deploy app to firebase |
+| `firebase login:ci` | gets firebase token    |
 
 ## Tech Stacks
 | techs         |    description                                         |
