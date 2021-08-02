@@ -13,17 +13,18 @@ Youtube clone application using React JS.
 | `firebase init`     | Initialize firebase    |
 | `firebase login`    | login to firebase      |
 | `firebase deploy`   | deploy app to firebase |
-| `firebase login:ci` | gets firebase token    |
+| `firebase login:ci` | fetch firebase token   |
 
 ## Tech Stacks
-| techs         |    description                                         |
+| tech          |    description                                         |
 |---------------|--------------------------------------------------------|
 | `material UI` | react components for faster and easier web development |
 | `react`       | js library for building UI                             |
-| `Firebase`    | hosting                                                |
+| `firebase`    | hosting                                                |
 | `gcp`         | cloud computing services (`IAAS & PAAS`)               |
 | `context api` | state management                                       |
 | `BEM css`     | naming convention for css                     |
+| `github-actions` | CI/CD                     |
 
 ## How to get started ?
 1. Get `API_KEY` from `GCP`
