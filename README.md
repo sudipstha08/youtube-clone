@@ -1,5 +1,5 @@
 # youtube-clone
-Youtube clone application using React JS.
+Youtube clone application using React JS. :zap:
 
 ![CI/CD](https://github.com/sudipstha08/youtube-clone/workflows/youtube-clone_ci/badge.svg)
 ![CI/CD](https://github.com/sudipstha08/youtube-clone/workflows/youtube-clone_cd/badge.svg)
