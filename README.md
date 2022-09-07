@@ -6,23 +6,25 @@ Youtube clone application using React JS. :zap:
 ![License](https://img.shields.io/github/license/dyarleniber/react-workflow-gh-actions)
 
 ## Commands
-|    commands       |     description        |
-|-------------------|------------------------|
-| `npm start`       | start app              |
-| `npm run build`   | build app              |
-| `firebase init`   | Initialize firebase    |
-| `firebase login`  | login to firebase      |
-| `firebase deploy` | deploy app to firebase |
+|    commands         |     description        |
+|---------------------|------------------------|
+| `npm start`         | start app              |
+| `npm run build`     | build app              |
+| `firebase init`     | Initialize firebase    |
+| `firebase login`    | login to firebase      |
+| `firebase deploy`   | deploy app to firebase |
+| `firebase login:ci` | fetch firebase token   |
 
 ## Tech Stacks
-| techs         |    description                                         |
+| tech          |    description                                         |
 |---------------|--------------------------------------------------------|
 | `material UI` | react components for faster and easier web development |
 | `react`       | js library for building UI                             |
-| `Firebase`    | hosting                                                |
+| `firebase`    | hosting                                                |
 | `gcp`         | cloud computing services (`IAAS & PAAS`)               |
 | `context api` | state management                                       |
 | `BEM css`     | naming convention for css                     |
+| `github-actions` | CI/CD                     |
 
 ## How to get started ?
 1. Get `API_KEY` from `GCP`
