@@ -1,3 +1,8 @@
+/**
+ *
+ * @param timeStamp -> date time
+ * @returns formatted date
+ */
 const formatDateFromNow = (timeStamp) => {
   const dateNow = new Date()
   const date = new Date(timeStamp)
