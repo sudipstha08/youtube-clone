@@ -10,6 +10,7 @@ NOTE − If you have used a default configuration, the public folder will be cre
 - firebase login --reauth
 - firebase projects:list
 - firebase use --add
+- firebase deploy --token "$FIREBASE_TOKEN"
 
 
 ## REFERENCES

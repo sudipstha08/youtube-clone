@@ -6,7 +6,7 @@ Youtube clone application using React JS. :zap:
 ![CI/CD](https://github.com/sudipstha08/youtube-clone/workflows/youtube-clone_cd/badge.svg)
 ![License](https://img.shields.io/github/license/dyarleniber/react-workflow-gh-actions)
 
-## Commands
+## Commands :wrench:
 
 |     Commands        |      Description       |
 | ------------------- | ---------------------- |
@@ -17,9 +17,9 @@ Youtube clone application using React JS. :zap:
 | `firebase deploy`   | deploy app to firebase |
 | `firebase login:ci` | fetch firebase token   |
 
-## Tech Stacks
+## Tech Stacks :package:
 
-| tech             | description                                            |
+| Tech             | Description                                            |
 | ---------------- | ------------------------------------------------------ |
 | `material UI`    | react components for faster and easier web development |
 | `react`          | js library for building UI                             |
@@ -29,7 +29,7 @@ Youtube clone application using React JS. :zap:
 | `BEM css`        | naming convention for css                              |
 | `github-actions` | CI/CD                                                  |
 
-## How to get started ?
+## How to get started ? :runner:
 
 1. Get `API_KEY` from `GCP`
 2. Create `.env` file in the `root` directory
