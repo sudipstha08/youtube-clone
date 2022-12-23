@@ -20,7 +20,7 @@ const SearchPage = () => {
       <div className="search-page__contents">
         <div className="search-page__filter">
           <TuneOutlinedIcon />
-          <h5>FILTER</h5>
+          <h5>FILTERS</h5>
         </div>
         <hr />
         <ChannelRow
